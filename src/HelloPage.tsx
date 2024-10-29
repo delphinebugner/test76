@@ -1,8 +1,8 @@
-import {Button, SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
+import {Button, SafeAreaView, ScrollView, StatusBar} from 'react-native';
 
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
-import {useNavigation} from '@react-navigation/native';
 
 export const HelloPage = () => {
   const backgroundStyle = {
@@ -26,4 +26,3 @@ export const HelloPage = () => {
     </SafeAreaView>
   );
 };
-

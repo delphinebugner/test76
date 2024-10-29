@@ -2,13 +2,12 @@ import {useNavigation} from '@react-navigation/native';
 import {Button, StyleSheet, Text, View} from 'react-native';
 
 export const MenuPage = () => {
-  const {navigate} = useNavigation();
+  const {goBack} = useNavigation();
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Je suis le menu</Text>
-      <Button title="Go to Menu 1" onPress={() => navigate('Menu1')} />
-      <Button title="Go to Menu 2" onPress={() => navigate('Menu2')} />
-      <Text style={styles.text}>Je suis en bas</Text>
+      <Text style={styles.text}>I am the menu</Text>
+      <Button title="Go back" onPress={() => goBack()} />
+      <Text style={styles.text}>I am the bottom</Text>
     </View>
   );
 };

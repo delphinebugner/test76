@@ -11,8 +11,12 @@ const MenuStack = createNativeStackNavigator();
 const MenuRooter = () => {
   return (
     <MenuStack.Navigator>
-      <Stack.Screen name="Menu1" component={MenuPage} />
-      <Stack.Screen name="Menu2" component={MenuPage} />
+      <Stack.Screen
+        name="Menu1"
+        component={MenuPage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen name="Settings" component={MenuPage} />
     </MenuStack.Navigator>
   );
 };
@@ -25,7 +29,7 @@ function App(): React.JSX.Element {
         <Stack.Screen
           name="MenuRooter"
           component={MenuRooter}
-          options={{presentation: 'modal'}}
+          options={{presentation: 'modal', headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>
